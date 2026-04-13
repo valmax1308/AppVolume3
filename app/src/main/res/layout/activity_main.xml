@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_volume_icon"
+                android:layout_marginEnd="12dp"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="AudioMixer Pro" android:textSize="20sp"
+                    android:textStyle="bold" android:textColor="#1A1A1A"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Control de volumen por aplicación"
+                    android:textSize="12sp" android:textColor="#888888"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Estado de permisos" android:textStyle="bold"
+                    android:textSize="14sp" android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tv_status"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="13sp" android:textColor="#555555"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Configurar permisos" android:textStyle="bold"
+                    android:textSize="14sp" android:textColor="#333333"
+                    android:layout_marginBottom="12dp"/>
+                <Button android:id="@+id/btn_overlay"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="1. Mostrar sobre otras apps"
+                    android:backgroundTint="#1D9E75" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btn_usage"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="2. Acceso a estadísticas de uso"
+                    android:backgroundTint="#378ADD" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btn_accessibility"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="3. Servicio de accesibilidad"
+                    android:backgroundTint="#6C63FF" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btn_battery"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="4. Sin restricción de batería"
+                    android:backgroundTint="#BA7517"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button android:id="@+id/btn_start"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="ACTIVAR PANEL FLOTANTE"
+            android:backgroundTint="#1D9E75" android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+        <Button android:id="@+id/btn_stop"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="DESACTIVAR"
+            android:backgroundTint="#888888" android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Preferencias guardadas" android:textStyle="bold"
+            android:textSize="14sp" android:textColor="#333333"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_saved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+    </LinearLayout>
+</ScrollView>

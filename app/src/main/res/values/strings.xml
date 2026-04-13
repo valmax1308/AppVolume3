@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioMixer Pro</string>
+    <string name="tile_label">AudioMixer</string>
+    <string name="accessibility_service_label">AudioMixer Pro - Control de volumen</string>
+    <string name="accessibility_description">Permite detectar cuando presionas los botones físicos de volumen para mostrar el panel de control.</string>
+</resources>
